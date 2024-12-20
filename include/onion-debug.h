@@ -23,7 +23,6 @@ extern "C" {
 #ifdef __cplusplus
 extern 
 #endif 
-int 	onionVerbosityLevel;
 
 // debug functions
 void 	onionSetVerbosity		(int verbosityLevel);

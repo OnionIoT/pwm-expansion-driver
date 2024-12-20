@@ -1,5 +1,15 @@
 #include <oled-exp.h>
 
+// Variables
+static int 	_vccState = OLED_EXP_SWITCH_CAP_VCC;
+static int 	_memoryMode = 0;
+
+static int 	_buffer[OLED_EXP_WIDTH * OLED_EXP_PAGES];
+static int 	_cursor = 0;
+
+static int 	_cursorInRow = 0;
+static int 	_bColumnsSetForText = 1;
+
 // Send command byte to OLED Expansion
 int _oledSendCommand (int command)
 {
